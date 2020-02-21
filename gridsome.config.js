@@ -6,5 +6,7 @@
 
 module.exports = {
   siteName: 'Marcell Lanczos',
-  plugins: []
+  plugins: [
+    
+  ]
 }

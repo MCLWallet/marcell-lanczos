@@ -18,21 +18,27 @@
 </h1>
 
 <h2>experienced in:</h2>
-<ul class="list">
-  <li v-for="(name, index) in experiences" :key="index">
-    {{name}}
-  </li>
-</ul>
+<VTextMarquee class="floating-text-banner" :speed="100">
+  <ul class="list experiences">
+      <li v-for="(name, index) in experiences" :key="index">
+        {{name}}
+        //
+      </li>
+    </ul>
+</VTextMarquee>
+
 
   </Layout>
 </template>
 
 <script>
 import { VueTyper } from 'vue-typer'
+import { VTextMarquee } from 'vue-text-marquee';
 
 export default {
   components: {
-    VueTyper
+    VueTyper,
+    VTextMarquee: VTextMarquee
   },
   data() {
     return {
@@ -54,12 +60,21 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .home-links a {
   margin-right: 1rem;
 }
 .list {
   list-style: circle;
+  &.experiences {
+    li {
+      display: inline;
+      padding: 12px 0;
+      color: #fff;
+      background-color: blue;
+    }
+  }
+  
 }
 .vue-typer .custom.char {
   color: #D4D4BD;
@@ -67,5 +82,14 @@ export default {
 }
 .vue-typer .custom.char.selected {
   background-color: #264F78;
+}
+
+// Animations
+.floating-text-banner {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.running:hover {
+  animation-play-state: paused !important;
 }
 </style>

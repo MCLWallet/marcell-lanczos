@@ -7,8 +7,10 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@growthbunker/vuedarkmode": "^0.5.56",
     "bootstrap-vue": "^2.5.0",
     "gridsome": "^0.7.0",
+    "vue-text-marquee": "^1.1.0",
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {
