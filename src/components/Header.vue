@@ -1,18 +1,23 @@
 <template>
   <header class="header">
+    <div class="logo-wrapper" 
+          @mouseover="headerHover('header-left')"
+          @mouseout="headerHover(false)">
       <g-link class="header-logo" to="/">
-      {{ $static.metadata.siteName }}
-      <div class="profession">
-        web-development & -design
-      </div>
+        {{ $static.metadata.siteName }}
+        <div class="profession">
+          software-development & -design
+        </div>
       </g-link>
-      
-      <nav class="nav">
-        <g-link class="nav__link" to="/">//home</g-link>
-        <g-link class="nav__link" to="/works/">//works</g-link>
-        <g-link class="nav__link" to="/contact/">//contact</g-link>
-      </nav>
-    </header>
+    </div>
+    <nav class="nav"
+          @mouseover="headerHover('header-right')"
+          @mouseout="headerHover(false)">
+      <g-link class="nav__link" to="/">//home</g-link>
+      <g-link class="nav__link" to="/works/">//works</g-link>
+      <g-link class="nav__link" to="/contact/">//contact</g-link>
+    </nav>
+  </header>
 </template>
 
 <static-query>
@@ -25,7 +30,11 @@ query {
 
 <script>
 export default {
-
+  methods: {
+    headerHover(location) {
+      this.$emit('changeBackgroundColor', location)
+    },
+  }
 }
 </script>
 
@@ -35,6 +44,9 @@ export default {
   justify-content: space-between;
   margin: 8px;
   border: 5px solid;
+  .logo-wrapper {
+    width: 100%;
+  }
   .header-logo {
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;

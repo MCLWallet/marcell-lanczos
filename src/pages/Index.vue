@@ -3,7 +3,7 @@
 
     <h1>
       <vue-typer
-        :text='["I am a freelance web developer ... ", "... also looking for work ;)"]'
+        :text='typerTexts'
         :repeat='Infinity'
         :shuffle='false'
         initial-action='erasing'
@@ -42,20 +42,28 @@ export default {
   },
   data() {
     return {
+      typerTexts: [
+        "I am a freelance developer ... ",
+        "... also looking for work ;)"
+      ],
       experiences: [
         'wordpress development',
-        'javascript',
+        'android + iOS app devevelopment',
+        'html5 + css3 + javascript',
         'php',
         'python',
         'jQuery',
         'php',
+        'java',
         'react',
         'vue.js',
-      ]
+        'gridsome',
+        'amazon alexa skill development',
+      ],
     }
   },
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Home'
   }
 }
 </script>

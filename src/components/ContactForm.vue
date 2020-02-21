@@ -125,6 +125,7 @@ button {
   width: 100%;
 }
 input, textarea {
+  width: 260px;
   font-family: JetBrainsMono-Regular;
   display: block;
   text-align: center;
@@ -132,8 +133,13 @@ input, textarea {
   border-style: dashed;
   border-width: 2px;
 }
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  height: 24px;
+}
+
 textarea {
-  width: 260px;
   height: 210px;
 }
 .stern {

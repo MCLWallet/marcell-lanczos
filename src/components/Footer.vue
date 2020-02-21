@@ -21,9 +21,11 @@ export default {
     position: absolute;
     bottom: 0;
     width: 100%;
+    height: 50px;
     border-top: 1px solid;
     .nav {
       color: royalblue;
+      height: 100%;
       display: flex;
       justify-content: space-between;
     }

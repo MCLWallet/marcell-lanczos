@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
 
-    <Header/>
+    <Header />
 
     <transition name="fade" appear>
       <main class="content">
@@ -17,12 +17,35 @@
 <script>
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Colors from '../data/colors.json'
 import { VTextMarquee } from 'vue-text-marquee';
 
 export default {
+  data() {
+    return {
+      webColors: Colors,
+      currentColors: [
+        {headerLeft: '#fff'},
+        {headerRight: '#fff'},
+        {content: '#fff'},
+        {footer: '#fff'},
+      ]
+    }
+  },
   components: {
     Header,
     Footer
+  },
+  methods: {
+    changeBackgroundColor(location) {
+      switch (location) {
+        case 'header-left':
+          
+      }
+    },
+    getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
   }
 }
 </script>
