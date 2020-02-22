@@ -1,8 +1,9 @@
 <template>
   <header class="header">
     <div class="logo-wrapper" 
-          @mouseover="headerHover('header-left')"
-          @mouseout="headerHover(false)">
+          @mouseover="headerHover(true, 'left')"
+          @mouseout="headerHover(false)"
+          :style="'background-color: ' + headerLeftColor + ';'">
       <g-link class="header-logo" to="/">
         {{ $static.metadata.siteName }}
         <div class="profession">
@@ -11,8 +12,9 @@
       </g-link>
     </div>
     <nav class="nav"
-          @mouseover="headerHover('header-right')"
-          @mouseout="headerHover(false)">
+          @mouseover="headerHover(true, 'right')"
+          @mouseout="headerHover(false)"
+          :style="'background-color: ' + headerRightColor + ';'">
       <g-link class="nav__link" to="/">//home</g-link>
       <g-link class="nav__link" to="/works/">//works</g-link>
       <g-link class="nav__link" to="/contact/">//contact</g-link>
@@ -29,11 +31,38 @@ query {
 </static-query>
 
 <script>
+import Color from '../data/colors.json'
 export default {
+  data() {
+    return {
+      colors: Color,
+      headerLeftColor: '#fff',
+      headerRightColor: '#fff'
+    }
+  },
+  computed: {
+    colorsObjLength() {
+      return Object.keys(this.colors).length
+    }
+  },
   methods: {
-    headerHover(location) {
-      this.$emit('changeBackgroundColor', location)
+    headerHover(hovered, location) {
+      if (hovered) {
+        var randomColorIndex = this.getRandomInt(this.colorsObjLength)
+        if (location == 'left') {
+          this.headerLeftColor = Object.values(this.colors)[randomColorIndex]
+        }
+        else if (location == 'right') {
+          this.headerRightColor = Object.values(this.colors)[randomColorIndex]
+        }
+      }
+      else {
+        this.headerLeftColor = '#fff'
+      }
     },
+    getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
   }
 }
 </script>

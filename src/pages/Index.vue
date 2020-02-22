@@ -26,7 +26,15 @@
       </li>
     </ul>
 </VTextMarquee>
-
+<h2>technologies + programming languages I use:</h2>
+<VTextMarquee class="floating-text-banner" :speed="100">
+  <ul class="list technologies">
+      <li v-for="(name, index) in technologies" :key="index">
+        {{name}}
+        //
+      </li>
+    </ul>
+</VTextMarquee>
 
   </Layout>
 </template>
@@ -49,16 +57,24 @@ export default {
       experiences: [
         'wordpress development',
         'android + iOS app devevelopment',
+        'design thinking processes',
+        'led mapping & programming',
+        'iot solutions with arduino & raspberry pi',
+        'amazon alexa skill development',
+      ],
+      technologies: [
         'html5 + css3 + javascript',
         'php',
         'python',
         'jQuery',
         'php',
         'java',
-        'react',
         'vue.js',
+        'react',
         'gridsome',
-        'amazon alexa skill development',
+        'processing',
+        'webGL',
+        'c++',
       ],
     }
   },
@@ -80,6 +96,14 @@ export default {
       padding: 12px 0;
       color: #fff;
       background-color: blue;
+    }
+  }
+  &.technologies {
+    li {
+      display: inline;
+      padding: 12px 0;
+      color: #fff;
+      background-color: lightseagreen;
     }
   }
   
