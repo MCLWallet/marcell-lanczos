@@ -21,7 +21,7 @@ export default {
     }
   },
   metaInfo: {
-    title: 'Works'
+    title: 'Impress'
   }
 }
 </script>

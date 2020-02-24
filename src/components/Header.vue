@@ -16,8 +16,8 @@
           @mouseout="headerHover(false)"
           :style="'background-color: ' + headerRightColor + ';'">
       <g-link class="nav__link" to="/">//home</g-link>
-      <g-link class="nav__link" to="/works/">//works</g-link>
-      <g-link class="nav__link" to="/contact/">//contact</g-link>
+      <g-link class="nav__link" to="/works">//works</g-link>
+      <g-link class="nav__link" to="/contact">//contact</g-link>
     </nav>
   </header>
 </template>

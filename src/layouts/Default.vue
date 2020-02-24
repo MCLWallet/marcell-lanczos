@@ -56,6 +56,7 @@ body {
   font-family: JetBrainsMono-Regular;
   margin: 0;
   overflow: hidden;
+  cursor: url(../assets/img/cursor.png);
   .layout {
     position: relative;
     min-height: 97vh;
@@ -76,7 +77,15 @@ body {
 a:visited {
   color:turquoise;
 }
+nav {
+  a:hover {
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+}
 .nav__link.active--exact.active {
   color: red;
+  text-transform: uppercase;
+  font-size: 18px;
 }
 </style>

@@ -2,19 +2,21 @@
   <Layout>
 
     <h1>
+      <!-- TODO: use Typed.js or vue-typed-js -->
       <vue-typer
-        :text='typerTexts'
-        :repeat='Infinity'
-        :shuffle='false'
-        initial-action='erasing'
-        :pre-type-delay='50'
-        :type-delay='60'
-        :pre-erase-delay='2000'
-        :erase-delay='250'
-        erase-style='select-all'
-        :erase-on-complete='false'
-        caret-animation='blink'
-      ></vue-typer>
+      :text='typerTexts'
+      :repeat='Infinity'
+      :shuffle='false'
+      initial-action='erasing'
+      :pre-type-delay='50'
+      :type-delay='60'
+      :pre-erase-delay='2000'
+      :erase-delay='250'
+      erase-style='select-all'
+      :erase-on-complete='false'
+      caret-animation='blink'>
+      </vue-typer>
+      
 </h1>
 
 <h2>experienced in:</h2>
@@ -40,13 +42,12 @@
 </template>
 
 <script>
-import { VueTyper } from 'vue-typer'
 import { VTextMarquee } from 'vue-text-marquee';
-
+import { VueTyper } from 'vue-typer'
 export default {
   components: {
-    VueTyper,
-    VTextMarquee: VTextMarquee
+    VTextMarquee: VTextMarquee,
+    'vue-typer': VueTyper
   },
   data() {
     return {

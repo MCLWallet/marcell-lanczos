@@ -123,6 +123,10 @@ button {
   font-size: 24px;
   background-color: palegreen;
   width: 100%;
+  height: 110px;
+  &:hover {
+    background-color: tomato;
+  }
 }
 input, textarea {
   width: 260px;
