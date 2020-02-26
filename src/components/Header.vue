@@ -7,7 +7,7 @@
           @mouseout="headerHover(false)"
           :style="'background-color: ' + headerLeftColor + ';'">
       <g-link class="header-logo" to="/">
-        {{ $static.metadata.siteName }}
+        <div class="name">{{ $static.metadata.siteName }}</div>
         <div class="profession">
           software-development & -design
         </div>
@@ -97,9 +97,12 @@ export default {
   .header-logo {
     font-family: Linebeam;
     text-decoration: none;
-    font-size: 58px;
     color: #000;
     // text-transform: lowercase;
+    .name {
+      font-size: 66px;
+      line-height: 1.4em;
+    }
     .profession {
       font-family: JetBrainsMono-Regular;
       font-size: 18px;

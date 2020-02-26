@@ -6,13 +6,12 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 // Import Styles
 import '~/assets/scss/fonts.scss'
+import '~/assets/scss/fluidtype.css'
 
 // Import Libraries
-// import VueTypedJs from 'vue-typed-js'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
-  // Vue.use(VueTypedJs)
 
 }

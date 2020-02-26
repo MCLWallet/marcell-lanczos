@@ -45,6 +45,7 @@ export default {
 
 <style lang="scss">
 .list {
+  margin: 0 2.2em;
   list-style: decimal-leading-zero;
   .details {
     list-style-type: lower-alpha;

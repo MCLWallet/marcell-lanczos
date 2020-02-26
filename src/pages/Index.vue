@@ -113,7 +113,8 @@ export default {
   
 }
 .typed-element {
-  height: 100px;
+  height: 200px;
+  margin: 2em 0;
   h1 {
     color: #fff;
   background-color: #1E1E1E;

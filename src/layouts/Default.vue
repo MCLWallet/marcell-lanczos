@@ -64,7 +64,7 @@ body {
 .content {
   margin: 8px;
   border: 5px dashed;
-  min-height: 85vh;
+  min-height: 82vh;
 }
 
 .fade-enter-active {
@@ -79,13 +79,13 @@ a:visited {
 nav {
   a:hover {
     text-transform: uppercase;
-    font-size: 18px;
+    // font-size: 18px;
   }
 }
 .nav__link.active--exact.active {
   color: red;
   text-transform: uppercase;
-  font-size: 18px;
+  // font-size: 18px;
 }
 @media screen and (max-width: 767px){
   
