@@ -1,59 +1,62 @@
 <template>
   <Layout>
 
-    <h1>
-      <!-- TODO: use Typed.js or vue-typed-js -->
-      <vue-typer
-      :text='typerTexts'
-      :repeat='Infinity'
-      :shuffle='false'
-      initial-action='erasing'
-      :pre-type-delay='50'
-      :type-delay='60'
-      :pre-erase-delay='2000'
-      :erase-delay='250'
-      erase-style='select-all'
-      :erase-on-complete='false'
-      caret-animation='blink'>
-      </vue-typer>
-      
-</h1>
+    <ClientOnly>
+      <vue-typed 
+        :strings="typerTexts"
+        :loop="true"
+        :typeSpeed="50"
+        :backSpeed="50"
+        :smartBackspace="false"
+        :showCursor="false">
+        <h1 class="typing"></h1>
+      </vue-typed>
+    </ClientOnly>
+    
 
 <h2>experienced in:</h2>
+<ClientOnly>
 <VTextMarquee class="floating-text-banner" :speed="100">
-  <ul class="list experiences">
-      <li v-for="(name, index) in experiences" :key="index">
-        {{name}}
-        //
-      </li>
-    </ul>
+<ul class="list experiences">
+    <li v-for="(name, index) in experiences" :key="index">
+      {{name}}
+      //
+    </li>
+  </ul>
 </VTextMarquee>
+
+</ClientOnly>
+
+
 <h2>technologies + programming languages I use:</h2>
-<VTextMarquee class="floating-text-banner" :speed="100">
-  <ul class="list technologies">
-      <li v-for="(name, index) in technologies" :key="index">
-        {{name}}
-        //
-      </li>
-    </ul>
-</VTextMarquee>
+<ClientOnly>
+  <VTextMarquee class="floating-text-banner" :speed="100">
+    <ul class="list technologies">
+        <li v-for="(name, index) in technologies" :key="index">
+          {{name}}
+          //
+        </li>
+      </ul>
+    </VTextMarquee>
+</ClientOnly>
 
   </Layout>
 </template>
 
 <script>
 import { VTextMarquee } from 'vue-text-marquee';
-import { VueTyper } from 'vue-typer'
+import { VueTypedJs } from 'vue-typed-js'
 export default {
   components: {
     VTextMarquee: VTextMarquee,
-    'vue-typer': VueTyper
+    'vue-typed': VueTypedJs
   },
   data() {
     return {
       typerTexts: [
         "I am a freelance developer ... ",
-        "... also looking for work ;)"
+        "... also looking for work ;)",
+        " ",
       ],
       experiences: [
         'wordpress development',
@@ -68,11 +71,11 @@ export default {
         'php',
         'python',
         'jQuery',
-        'php',
         'java',
         'vue.js',
         'react',
         'gridsome',
+        'graphQL',
         'processing',
         'webGL',
         'c++',
@@ -109,18 +112,19 @@ export default {
   }
   
 }
-.vue-typer .custom.char {
-  color: #D4D4BD;
+.typed-element {
+  height: 100px;
+  h1 {
+    color: #fff;
   background-color: #1E1E1E;
-}
-.vue-typer .custom.char.selected {
-  background-color: #264F78;
+  }
 }
 
 // Animations
 .floating-text-banner {
-  margin-right: -10px;
-  margin-left: -10px;
+  margin-right: -13px;
+  margin-left: -13px;
+  z-index: 90;
 }
 .running:hover {
   animation-play-state: paused !important;

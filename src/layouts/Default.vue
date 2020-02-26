@@ -18,7 +18,6 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Colors from '../data/colors.json'
-import { VTextMarquee } from 'vue-text-marquee';
 
 export default {
   data() {
@@ -55,7 +54,7 @@ export default {
 body {
   font-family: JetBrainsMono-Regular;
   margin: 0;
-  overflow: hidden;
+  // overflow: hidden;
   cursor: url(../assets/img/cursor.png);
   .layout {
     position: relative;
@@ -64,8 +63,8 @@ body {
 }
 .content {
   margin: 8px;
-  border: 1px dashed;
-  min-height: 80vh;
+  border: 5px dashed;
+  min-height: 85vh;
 }
 
 .fade-enter-active {
@@ -87,5 +86,8 @@ nav {
   color: red;
   text-transform: uppercase;
   font-size: 18px;
+}
+@media screen and (max-width: 767px){
+  
 }
 </style>
