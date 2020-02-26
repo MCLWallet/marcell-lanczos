@@ -95,11 +95,11 @@ export default {
       try {
         const res = await fetch(form.action, {method: 'POST', body})
         if (res.ok) {
-          this.$bvModal.show('modal-success')
+          // this.$bvModal.show('modal-success')
           console.log("Success");
         } else {
           console.log("Not OK");
-          this.$bvModal.show('modal-error')
+          // this.$bvModal.show('modal-error')
           throw res
         }
       }
