@@ -55,7 +55,7 @@ export default {
     return {
       typerTexts: [
         "I am a freelance developer ... ",
-        "... also looking for work ;)",
+        "... nice to meet you ;)",
         " ",
       ],
       experiences: [
