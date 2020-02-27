@@ -1,11 +1,15 @@
 <template>
   <Layout>
-    <h1>Some projects I did</h1>
-    <ul class="list">
-      <li v-for="(project, index) in projects" :key="index">
-        {{project.name}}: <a :href="project.url">Link</a>
-      </li>
-    </ul>
+    <h1 class="entry-title main_title">Impressum</h1>
+				
+				
+					<div class="entry-content">
+					<p>Marcell Lanczos<br>Inhaber des Unternehmens: Marcell Lanczos<br>Krenngasse 5/3<br>1180 Vienna<br>Österreich<br>Email: mcl.wall@gmail.com<br>Telefon: <br>Umsatzsteuer-Identifikationsnummer: ATU 74388209</p>
+<p>Verantwortlich für Inhalt: Marcell Lanczos</p>
+<p>Plattform der Europäischen Kommission zur Online-Streitbeilegung (OS) für Verbraucher: <a href="https://ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr/</a>. Wir sind nicht bereit und nicht verpflichtet an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+					</div> <!-- .entry-content -->
+          
   </Layout>
 </template>
 
