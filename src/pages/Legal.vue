@@ -5,7 +5,7 @@
 <p></p><p>In dieser Datenschutzerklärung informieren wir Sie über die Verarbeitung Ihrer personenbezogenen Daten.</p>
 <p> Sofern Sie Ihre Datenschutzeinstellungen ändern möchten (Einwilligungen erteilen oder bereits erteilte Einwilligungen widerrufen), klicken Sie <a target="_blank" href="#" class="sp-dsgvo-show-privacy-popup">hier</a> um Ihre Einstellungen zu ändern.</p>
 <h2>Verantwortlich</h2>
-<p>Marcell Lanczos, Marcell Lanczos, Krenngasse 5/3, 1180 Vienna, AT, mcl.wall@gmail.com, </p>
+<p>Marcell Lanczos, Marcell Lanczos, Krenngasse 5/3, 1180 Vienna, AT, <a href="mailto:marcell@studio-seis.at">marcell@studio-seis.at</a> </p>
 <h2>Hosting Provider</h2>
 <p><strong>Dienst:</strong> <a href="https://www.netlify.com/">Netlify</a><br>
 <strong>Anbieter:</strong> Netlify, 2325 3rd St #215, San Francisco, CA 94107, Vereinigte Staaten<br>
