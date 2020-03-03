@@ -68,6 +68,8 @@
 
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
@@ -88,35 +90,18 @@ export default {
         .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
         .join('&')
     },
-    handleSubmit(e) {
-      fetch('/', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-        body: this.encode({
-          'form-name': e.target.getAttribute('name'),
-          ...this.formData,
+    handleSubmit() {
+      const axiosConfig = {
+        header: {"Content-Type": "application/x-www-form-urlencoded"}
+      };
+      axios.post(
+        "/",
+        this.encode({
+          "form-name": "contact-form",
+          ...this.formData
         }),
-      })
-      .then(() => console.log("Juhuuu!"))
-      .catch(e => console.error(e))
-    },
-    async handleSubmitAJAX($event) {
-      const form = $event.target
-      const body = new URLSearchParams(new FormData(form))
-      try {
-        const res = await fetch(form.action, {method: 'POST', body})
-        if (res.ok) {
-          // this.$bvModal.show('modal-success')
-          console.log("Success");
-        } else {
-          console.log("Not OK");
-          // this.$bvModal.show('modal-error')
-          throw res
-        }
-      }
-      catch (err) {
-        console.error(err)
-      }
+        axiosConfig
+      )
     }
   }
 }
