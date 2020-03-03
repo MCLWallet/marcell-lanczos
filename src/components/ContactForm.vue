@@ -2,7 +2,6 @@
   <form name="contact-form"
           method="post"
           @submit.prevent="handleSubmit"
-          action="contact/success/"
           data-netlify="true"
           data-netlify-honeypot="bot-field">
     <!-- Hidden Honeypot Field -->
@@ -99,7 +98,9 @@ export default {
           ...this.formData,
         }),
       })
-      .then(() => this.$router.push('/success'))
+      .then(
+        console.log("Success")
+      )
       .catch(error => alert(error))
     }
   }
