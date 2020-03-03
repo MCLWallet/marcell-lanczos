@@ -2,6 +2,7 @@
   <form name="contact-form"
           method="post"
           @submit.prevent="handleSubmit"
+          action="contact/success/"
           data-netlify="true"
           data-netlify-honeypot="bot-field">
     <!-- Hidden Honeypot Field -->
@@ -60,7 +61,7 @@
         required></textarea>
     </div>
     <!-- Submit Button -->
-    <button type="submit" pill variant="secondary">
+    <button type="submit"> 
       SEND
     </button>
   </form>
@@ -68,7 +69,6 @@
 
 
 <script>
-import axios from "axios";
 
 export default {
   data() {
@@ -90,18 +90,17 @@ export default {
         .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
         .join('&')
     },
-    handleSubmit() {
-      const axiosConfig = {
-        header: {"Content-Type": "application/x-www-form-urlencoded"}
-      };
-      axios.post(
-        "/",
-        this.encode({
-          "form-name": "contact-form",
-          ...this.formData
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData,
         }),
-        axiosConfig
-      )
+      })
+      .then(() => this.$router.push('/success'))
+      .catch(error => alert(error))
     }
   }
 }
