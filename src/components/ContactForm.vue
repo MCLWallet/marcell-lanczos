@@ -1,12 +1,12 @@
 <template>
   <form name="contact-form"
           method="post"
-          @submit.prevent="handleSubmitAJAX"
-          action="/contact"
+          @submit.prevent="handleSubmit"
+          action="/success"
           data-netlify="true"
           data-netlify-honeypot="bot-field">
     <!-- Hidden Honeypot Field -->
-    <input type="hidden" name="form-name" :value="name"/>
+    <input type="hidden" name="form-name" value="contact-form"/>
     <p hidden>
       <label>
         Don't fill this out: <input name="bot-field"/>
@@ -88,6 +88,18 @@ export default {
       return Object.keys(data)
         .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
         .join('&')
+    },
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData,
+        }),
+      })
+      .then(() => console.log("Juhuuu!"))
+      .catch(e => console.error(e))
     },
     async handleSubmitAJAX($event) {
       const form = $event.target
