@@ -59,7 +59,8 @@ export default {
         " ",
       ],
       experiences: [
-        'wordpress development',
+        'wordpress',
+        'shopify',
         'android + iOS app devevelopment',
         'design thinking processes',
         'led mapping & programming',
