@@ -99,9 +99,27 @@ export default {
         }),
       })
       .then(
-        console.log("Success")
+        this.$modal.show('dialog', {
+          title: 'Thank You!',
+          text: 'Your message has been sent :)',
+          buttons: [
+            {
+              title: 'Close'
+            }
+        ]
+        })
       )
-      .catch(error => alert(error))
+      .catch(
+        this.$modal.show('dialog', {
+          title: 'Ooops!',
+          text: 'Something went wrong :( </br> Try it again later',
+          buttons: [
+            {
+              title: 'Close'
+            }
+        ]
+        })
+      )
     }
   }
 }
@@ -122,6 +140,7 @@ button {
   height: 110px;
   &:hover {
     background-color: tomato;
+    cursor: pointer;
   }
 }
 input, textarea {
