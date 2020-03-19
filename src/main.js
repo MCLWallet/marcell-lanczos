@@ -9,7 +9,7 @@ import '~/assets/scss/fonts.scss'
 import '~/assets/scss/fluidtype.css'
 
 // Import Libraries
-import VModal from 'vue-js-modal'
+import VModal from 'vue-js-modal/dist/ssr.index'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
