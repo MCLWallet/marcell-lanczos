@@ -144,18 +144,23 @@ button {
   }
 }
 input, textarea {
-  width: 260px;
+  width: 50%;
   font-family: JetBrainsMono-Regular;
   display: block;
   text-align: center;
   margin: auto;
   border-style: dashed;
   border-width: 2px;
+      font-size: 14px;
+}
+textarea {
+  width: 75%;
+  padding: 0.4em;
 }
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
-  height: 24px;
+  height: 32px;
 }
 
 textarea {
