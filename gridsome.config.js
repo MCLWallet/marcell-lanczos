@@ -6,6 +6,8 @@
 
 module.exports = {
   siteName: 'Marcell Lanczos',
+  siteUrl: 'https://www.marcell-lanczos.com/',
+  siteDescription: 'I am a freelance web-developer working with vue.js, wordpress, shopify and other modern technologies. Hire me for your awesome project!',
   plugins: [
     {
       use: 'gridsome-plugin-modal'
