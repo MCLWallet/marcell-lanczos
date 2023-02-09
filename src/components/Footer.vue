@@ -4,7 +4,7 @@
           @mouseout="footerHover(false)"
           :style="'background-color: ' + footerColor + ';'">
       <nav class="nav">
-        <a href="mailto:marcell@studio-seis.at">marcell@studio-seis.at</a>
+        <a href="mailto:info@marcell-lanczos.com">info@marcell-lanczos.com</a>
         <div class="legal-menu">
           <g-link class="nav__link" to="/imprint">.imprint</g-link>
           <g-link class="nav__link" to="/legal">.legal</g-link>

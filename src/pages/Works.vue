@@ -21,19 +21,27 @@ export default {
     return {
       projects: [
         {
+          name: "Polarstern",
+          url:"https://www.polarstern.me/",
+          year: "2019 - today",
+          design: "UXilize, Studio Seis",
+          technologies: ['storyblok', 'netlify CMS' , 'vue.js', 'node.js', 'gridsome']
+        },
+        {
+          name: "Geld Magazin",
+          url:"https://www.geld-magazin.at/",
+          year: "2020",
+          design: "Nadine Werjant",
+          technologies: ['wordpress', 'php', 'vue.js', 'vanilla JS']
+        },
+        {
           name: "Club of Vienna",
           url:"http://www.clubofvienna.org/",
           year: "2019",
           design: "Nadine Werjant",
           technologies: ['wordpress', 'php', 'vanilla JS']
         },
-        {
-          name: "Polarstern",
-          url:"https://www.polarstern.me/",
-          year: "2019",
-          design: "UXilize, Studio Seis",
-          technologies: ['netlify CMS', 'vue.js', 'gridsome']
-        },
+        
       ]
     }
   },

@@ -54,32 +54,28 @@ export default {
   data() {
     return {
       typerTexts: [
-        "I am a freelance developer ... ",
-        "... nice to meet you ;)",
+        "Hi, I'm Marcell and a web-/mobile-developer ... ",
+        "... let me code something for you ;)",
         " ",
       ],
       experiences: [
+        'storyblok',
         'wordpress',
         'shopify',
         'android + iOS app devevelopment',
-        'design thinking processes',
-        'led mapping & programming',
-        'iot solutions with arduino & raspberry pi',
-        'amazon alexa skill development',
       ],
       technologies: [
         'html5 + css3 + javascript',
+        'vue.js',
+        'react',
+        'graphQL',
+        'swift',
+        'java',
         'php',
         'python',
         'jQuery',
-        'java',
-        'vue.js',
-        'react',
-        'gridsome',
-        'graphQL',
-        'processing',
         'webGL',
-        'c++',
+        'c++'
       ],
     }
   },
