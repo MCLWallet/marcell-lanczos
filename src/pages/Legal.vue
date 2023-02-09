@@ -5,7 +5,7 @@
 <p></p><p>In dieser Datenschutzerklärung informieren wir Sie über die Verarbeitung Ihrer personenbezogenen Daten.</p>
 <p> Sofern Sie Ihre Datenschutzeinstellungen ändern möchten (Einwilligungen erteilen oder bereits erteilte Einwilligungen widerrufen), klicken Sie <a target="_blank" href="#" class="sp-dsgvo-show-privacy-popup">hier</a> um Ihre Einstellungen zu ändern.</p>
 <h2>Verantwortlich</h2>
-<p>Marcell Lanczos, Marcell Lanczos, Krenngasse 5/3, 1180 Vienna, AT, <a href="mailto:marcell@studio-seis.at">marcell@studio-seis.at</a> </p>
+<p>Marcell Lanczos, Marcell Lanczos, Krenngasse 5/3, 1180 Vienna, AT, <a href="mailto:info@marcell-lanczos.com">info@marcell-lanczos.com</a> </p>
 <h2>Hosting Provider</h2>
 <p><strong>Dienst:</strong> <a href="https://www.netlify.com/">Netlify</a><br>
 <strong>Anbieter:</strong> Netlify, 2325 3rd St #215, San Francisco, CA 94107, Vereinigte Staaten<br>
@@ -29,6 +29,12 @@
 <p></p><p>Sie haben zudem das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung der personenbezogenen Daten.</p>
 <p>Soweit die Rechtsgrundlage der Verarbeitung Ihrer personenbezogenen Daten in Ihrer Einwilligung oder in einem mit Ihnen abgeschlossenen Vertrag besteht, haben Sie überdies das Recht auf Datenübertragbarkeit. </p>
 <p>Weiters haben Sie das Recht auf Beschwerde bei der Aufsichtsbehörde. Nähere Informationen zu den Aufsichtsbehörden in der Europäischen Union finden Sie <a target="_blank" href="https://ec.europa.eu/justice/article-29/structure/data-protection-authorities/index_en.htm" title="Datenschutzbehörden">hier</a>.</p><p></p>
+<h2>Analysedienste</h2>
+<h3>Google Analytics</h3>
+<p>Im Fall der Erteilung Ihrer Einwilligung verarbeiten wir mit dem Dienst Google Analytics, Google LLC, Amphitheatre Parkway, Mountain View, CA 94043, USA, als gemeinsame Verantwortliche Ihre personenbezogenen Daten zum Zweck der Fehleranalyse und der statistischen Auswertung unserer Website. Die Nichterteilung der Einwilligung hat auf die Funktion der Website keine unmittelbare Auswirkung, ohne statistische Daten wird uns jedoch die Weiterentwicklung der Website erschwert. Eine bereits erteilte Einwilligung können Sie widerrufen, indem Sie die Datenschutzeinstellungen ändern.</p>
+<p>Wir ermöglichen dem Dienst die Erhebung von Verbindungsdaten, Daten ihres Webbrowsers und Daten über die aufgerufenen Inhalte sowie die Ausführung von Analysesoftware und die Speicherung von Daten auf ihrem Endgerät. Der Dienst anonymisiert die erhobenen Daten unmittelbar nach der Erhebung und stellt uns die anonymen Daten in Form von Statistiken zur Auswertung zur Verfügung. Wir nutzen diese Statistiken zur Fehlerbehebung und zur Weiterentwicklung unserer Website. Die Daten auf ihrem Endgerät werden für die Dauer von bis zu zwei Jahren gespeichert.</p>
+<p>Die Rechtsgrundlage für die Datenverarbeitung ist Ihre Einwilligung gemäß § 96 Abs. 3 TKG. Die Rechtsgrundlage für die Übermittlung in die USA ist der Durchführungsbeschluss der EU-Kommission C/2016/4176 sowie die erfolgte Privacy Shield Zertifizierung.</p>
+
 
 					</div> <!-- .entry-content -->
   </Layout>
