@@ -16,4 +16,19 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
   Vue.use(VModal, {dialog: true})
 
+  // Google Analytics
+  head.script.push({
+    src: 'https://www.googletagmanager.com/gtag/js?id=G-3R6W056HGY',
+    async: true
+  })
+  head.script.push({
+    innerHTML: 
+      `window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+       gtag('config', 'G-3R6W056HGY');`,
+    type: 'text/javascript',
+    charset: 'utf-8'
+  })
+
 }

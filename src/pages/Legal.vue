@@ -34,6 +34,7 @@
 <p>Im Fall der Erteilung Ihrer Einwilligung verarbeiten wir mit dem Dienst Google Analytics, Google LLC, Amphitheatre Parkway, Mountain View, CA 94043, USA, als gemeinsame Verantwortliche Ihre personenbezogenen Daten zum Zweck der Fehleranalyse und der statistischen Auswertung unserer Website. Die Nichterteilung der Einwilligung hat auf die Funktion der Website keine unmittelbare Auswirkung, ohne statistische Daten wird uns jedoch die Weiterentwicklung der Website erschwert. Eine bereits erteilte Einwilligung können Sie widerrufen, indem Sie die Datenschutzeinstellungen ändern.</p>
 <p>Wir ermöglichen dem Dienst die Erhebung von Verbindungsdaten, Daten ihres Webbrowsers und Daten über die aufgerufenen Inhalte sowie die Ausführung von Analysesoftware und die Speicherung von Daten auf ihrem Endgerät. Der Dienst anonymisiert die erhobenen Daten unmittelbar nach der Erhebung und stellt uns die anonymen Daten in Form von Statistiken zur Auswertung zur Verfügung. Wir nutzen diese Statistiken zur Fehlerbehebung und zur Weiterentwicklung unserer Website. Die Daten auf ihrem Endgerät werden für die Dauer von bis zu zwei Jahren gespeichert.</p>
 <p>Die Rechtsgrundlage für die Datenverarbeitung ist Ihre Einwilligung gemäß § 96 Abs. 3 TKG. Die Rechtsgrundlage für die Übermittlung in die USA ist der Durchführungsbeschluss der EU-Kommission C/2016/4176 sowie die erfolgte Privacy Shield Zertifizierung.</p>
+<p> Ein <a href="#app-opt-out">Opt-Out</a> ist jederzeit möglich. </p>
 
 
 					</div> <!-- .entry-content -->
@@ -42,13 +43,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      projects: [
-        {name: "Club of Vienna", url:"http://www.clubofvienna.org/"},
-        {name: "Polarstern", url:"https://www.polarstern.me/"},
-        
-      ]
+  mounted() {
+    var optOutButton = document.querySelectorAll("a[href='#app-opt-out']");
+    optOutButton[0].onclick = function() {
+      window.klaro.show();
     }
   },
   metaInfo: {

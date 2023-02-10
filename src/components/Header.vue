@@ -50,6 +50,12 @@ query {
 <script>
 import Color from '../data/colors.json'
 export default {
+  mounted() {
+    document.addEventListener('consentUpdate', this.consentToggle)
+  },
+  beforeDestroy() {
+    document.removeEventListener('consentUpdate', this.consentToggle)
+  },
   data() {
     return {
       colors: Color,
@@ -80,7 +86,19 @@ export default {
     },
     getRandomInt(max) {
       return Math.floor(Math.random() * Math.floor(max));
-    }
+    },
+    consentToggle(event) {
+      // only is app is google analytics
+      if (event.detail.app === 'googleAnalytics') {
+        if (event.detail.consent) {
+          // if user consent is true
+          window['ga-disable-G-3R6W056HGY'] = false;
+        } else {
+          // if user consent is false
+          window['ga-disable-G-3R6W056HGY'] = true;
+        }
+      }
+    },
   }
 }
 </script>
