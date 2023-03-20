@@ -1,6 +1,7 @@
 <template>
   <Layout>
-    <h1>Some projects I did</h1>
+    <h1>Some freelance projects I did</h1>
+    <p>(for my employed work, feel free to check out my <a href="https://cv.marcell-lanczos.com/" target="_blank">CV</a> or my <a href="https://www.linkedin.com/in/marcell-lanczos-32b2191a5/" target="_blank">LinkedIn</a>. )</p>
     <ul class="list">
       <li v-for="(project, index) in projects" :key="index">
         {{project.name}}: <a :href="project.url" target="_blank">Link</a>

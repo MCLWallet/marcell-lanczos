@@ -30,6 +30,7 @@
       <!-- Menu Items -->
       <nav class="nav" :class="{active: menuActive}">
         <g-link class="nav__link" to="/">//home</g-link>
+        <a href="https://cv.marcell-lanczos.com/" target="_blank">//cv</a>
         <g-link class="nav__link" to="/works">//works</g-link>
         <g-link class="nav__link" to="/contact">//contact</g-link>
       </nav>
